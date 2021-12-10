@@ -9,13 +9,13 @@ let countM = 152;
 let idInterval;
 man.style.top = 152 + "px";
 
-const availableScreenWidth = window.innerWidth - 520;
-const availableScreenHeight = window.innerHeight - 600;
+const availableScreenWidth = window.innerWidth - 500;
+const availableScreenHeight = window.innerHeight - 380;
 
 const flyAnimate = () => {
     countA++;
     countM++;
-    console.log(countA, countM++);
+    console.log(countA, countM);
 
     man.style.position = "absolute";
     airplane.style.position = "absolute";
