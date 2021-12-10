@@ -4,28 +4,29 @@ const airplane = document.querySelector(".airplane");
 const man = document.querySelector(".man");
 
 let active = false;
-let count = 0;
+let countA = 0;
+let countM = 152;
 let idInterval;
+man.style.top = 152 + "px";
 
 const availableScreenWidth = window.innerWidth - 520;
-const availableScreenHeight = window.innerHeight - 220;
+const availableScreenHeight = window.innerHeight - 600;
 
 const flyAnimate = () => {
-    count++;
-    console.log(count);
+    countA++;
+    countM++;
+    console.log(countA, countM++);
 
     man.style.position = "absolute";
-    //man.style.left = 0 + "px";
-    // man.style.top = 152 + "px";
     airplane.style.position = "absolute";
 
     idInterval = requestAnimationFrame(flyAnimate);
 
-    if (count < availableScreenHeight) {
-        man.style.top = count + "px";
-        airplane.style.left = count + "px";
-    } else if (count < availableScreenWidth) {
-        airplane.style.left = count + "px";
+    if (countA < availableScreenHeight) {
+        man.style.top = countM + "px";
+        airplane.style.left = countA + "px";
+    } else if (countA < availableScreenWidth) {
+        airplane.style.left = countA + "px";
     } else {
         cancelAnimationFrame(idInterval);
     }
